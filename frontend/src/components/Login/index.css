@@ -1,0 +1,158 @@
+.split-auth-container {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr; /* Larger image side on desktop */
+  min-height: 100vh;
+  background-color: #ffffff;
+}
+
+/* Form Side (Left) */
+.auth-form-side {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+.form-wrapper {
+  width: 100%;
+  max-width: 420px;
+}
+
+.brand-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #2E7D32;
+  font-size: 22px;
+  font-weight: 800;
+  margin-bottom: 50px;
+}
+
+.text-header h2 {
+  font-size: 32px;
+  color: #1a1a1a;
+  margin-bottom: 10px;
+}
+
+.text-header p {
+  color: #666;
+  margin-bottom: 30px;
+}
+
+/* Input Styling */
+.input-field {
+  margin-bottom: 20px;
+}
+
+.input-field label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.field-icon {
+  position: absolute;
+  left: 15px;
+  color: #2E7D32;
+  opacity: 0.6;
+}
+
+.input-wrapper input {
+  width: 100%;
+  padding: 14px 15px 14px 45px;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  font-size: 15px;
+  transition: all 0.3s;
+}
+
+.input-wrapper input:focus {
+  border-color: #2E7D32;
+  box-shadow: 0 0 0 4px rgba(46, 125, 50, 0.1);
+  outline: none;
+}
+
+/* Buttons and Links */
+.form-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+
+.accent-link {
+  color: #2E7D32;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.submit-btn {
+  width: 100%;
+  background: #2E7D32;
+  color: white;
+  padding: 16px;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: 0.3s;
+}
+
+.submit-btn:hover {
+  background: #1B5E20;
+  transform: translateY(-2px);
+}
+
+/* Image Side (Right) */
+.auth-image-side {
+  background: url('https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'); /* Agricultural theme */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.image-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.6));
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 60px;
+}
+
+.quote-box {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 30px;
+  border-radius: 20px;
+  color: white;
+  max-width: 500px;
+}
+
+.quote-box h3 { font-size: 24px; margin-bottom: 10px; }
+.quote-box p { opacity: 0.8; line-height: 1.6; }
+
+/* RESPONSIVENESS */
+@media (max-width: 900px) {
+  .split-auth-container {
+    grid-template-columns: 1fr;
+  }
+  .auth-image-side {
+    display: none; /* Hide image on tablet/mobile for focus */
+  }
+}

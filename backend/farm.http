@@ -1,0 +1,53 @@
+### ================================
+### REGISTER USER
+### ================================
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+  "email": "omnavale128@gmail.com",
+  "password": "123456",
+  "name": "Om Navale"
+}
+
+
+### ================================
+### LOGIN USER
+### ================================
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "omnavale128@gmail.com",
+  "password": "123456"
+}
+
+### ================================
+### SAVE ANALYSIS
+### ================================
+POST http://localhost:5000/api/analysis
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YTJlNDE3ZGRlN2EzZTFkMDRiZmIwMCIsImlhdCI6MTc3MjI4NDE1M30.kKQ02KlOehzDCDPSbH5wofp-TfnLH-LVYohuBTY7zb0
+Content-Type: application/json
+
+{
+  "imageUrl": "http://example.com/image.jpg",
+  "cropName": "Wheat",
+  "diseaseName": "Rust",
+  "diseaseConfidence": 95.5,
+  "severityLevel": "High",
+  "symptoms": ["Yellow spots on leaves", "Leaf curling"],
+  "treatment": "Apply fungicide",
+  "preventionTips": ["Use resistant varieties", "Rotate crops"]
+}
+
+### ================================
+### GET USER ANALYSES
+### ================================
+GET http://localhost:5000/api/analysis
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YTJlNDE3ZGRlN2EzZTFkMDRiZmIwMCIsImlhdCI6MTc3MjI4NDE1M30.kKQ02KlOehzDCDPSbH5wofp-TfnLH-LVYohuBTY7zb0
+
+### ================================
+### GET USER PROFILE
+### ================================
+GET http://localhost:5000/api/auth/profile
+Authorization : Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YTJlNDE3ZGRlN2EzZTFkMDRiZmIwMCIsImlhdCI6MTc3NTAxOTk2NH0._Vr1IV84vJApXDe_DjBNOWj9p5kwR_l-6Is_dmXZlFA
