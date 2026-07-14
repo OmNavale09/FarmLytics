@@ -68,11 +68,11 @@ const analyzePlantDisease = async (imageFile) => {
 
     const formData = new FormData();
     formData.append("file", imageFile);
-    formData.append("upload_preset", "plant_ai_upload");
-    formData.append("cloud_name", "dtcb7kpsw");
+    formData.append("upload_preset", "");
+    formData.append("cloud_name", "");
 
     const uploadResponse = await fetch(
-      "https://api.cloudinary.com/v1_1/dtcb7kpsw/image/upload",
+      `https://api.cloudinary.com/v1_1/${fromData.cloud_name}/image/upload`,
       {
         method: "POST",
         body: formData,
